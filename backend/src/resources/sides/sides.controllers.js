@@ -31,10 +31,10 @@ export const getSingleSides = tryCatchWrapper(async function (req, res, next) {
  * @description Create sides
  * @route POST /sides
  */
-export const addAddress = tryCatchWrapper(async function (req, res, next, t) {
+export const createSides = tryCatchWrapper(async function (req, res, next, t) {
   const { name, price } = req.body;
 
-  if (!name || !price) 
+  if (!name || !price)
     return next(createCustomError("All fields are required", 400));
 
   const sidesGuid = uuidv4();

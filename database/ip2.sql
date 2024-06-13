@@ -16,8 +16,8 @@
 
 
 -- Dumping database structure for infprojektbp
-CREATE DATABASE IF NOT EXISTS `infprojektbp` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
-USE `infprojektbp`;
+CREATE DATABASE IF NOT EXISTS `infproj2` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+USE `infproj2`;
 
 -- Dumping structure for table infprojektbp.addresses
 CREATE TABLE IF NOT EXISTS `addresses` (
@@ -171,6 +171,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(100) DEFAULT '',
   `password` varchar(255) DEFAULT '',
   `phoneNumber` varchar(100) DEFAULT '',
+  `isAdmin` int(11) DEFAULT 0,
   PRIMARY KEY (`userGuid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

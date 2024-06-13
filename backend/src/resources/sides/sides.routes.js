@@ -9,7 +9,11 @@ import {
 
 const router = express.Router();
 
-router.route("/").get(getSides).post(createSides).delete(deleteSides);
-router.route("/:sidesGuid").get(getSingleSides).update(updateSides);
+router.route("/").get(getSides).post(createSides);
+router
+  .route("/:sidesGuid")
+  .get(getSingleSides)
+  .patch(updateSides)
+  .delete(deleteSides);
 
 export default router;
